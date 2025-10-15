@@ -1,0 +1,95 @@
+body {
+    height: 100vh;
+    background-color: cornflowerblue;
+    display: grid;
+    place-items: center;
+}
+
+.box {
+    background-color: yellow;
+    width: 50px;
+    height: 50px;
+    animation-name: ipertraslazione;
+    animation-duration: 2s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    /* animation-delay: 5s; */
+    animation-delay: 0s;
+    /* animation-fill-mode: forwards; */
+    animation-timing-function: ease-in-out;
+    display: grid;
+    place-items: center;
+    /* transform-origin: top right; */
+}
+
+.box:hover {
+    animation-play-state: running;
+}
+
+@keyframes superanimazione {
+    0% {
+        width: 50px;
+        /* background-color: yellow; */
+    }
+
+    /* 50%{
+        background-color: cyan;
+    } */
+    100% {
+        width: 500px;
+        /* background-color: blue; */
+    }
+
+    /* 
+    100%{
+        background-color: yellow;
+    } */
+}
+
+@keyframes megarotazione {
+    from {
+        transform: rotate(0deg);
+        background-color: yellow;
+    }
+
+    to {
+        transform: rotate(360deg);
+        background-color: white;
+    }
+}
+
+
+.little-box {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    animation-name: megarotazione;
+    animation-duration: 0.5s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+.little-box:hover {
+    animation-play-state: running;
+}
+
+
+@keyframes ipertraslazione {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    33% {
+        transform: translate(100px, 0px);
+    }
+
+    66% {
+        transform: translate(100px, 100px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
