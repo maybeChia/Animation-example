@@ -9,7 +9,7 @@ body {
     background-color: yellow;
     width: 50px;
     height: 50px;
-    animation-name: ipertraslazione;
+    animation-name: ultraskew;
     animation-duration: 2s;
     animation-play-state: running;
     animation-iteration-count: infinite;
@@ -20,6 +20,8 @@ body {
     display: grid;
     place-items: center;
     /* transform-origin: top right; */
+    animation-direction: alternate;
+
 }
 
 .box:hover {
@@ -92,4 +94,26 @@ body {
     100% {
         transform: translate(0px, 0px);
     }
+}
+
+
+@keyframes gigascale {
+    0% {
+        transform: scale(1)
+    }
+
+    33% {
+        transform: scale(4, 2)
+    }
+}
+
+@keyframes ultraskew {
+    0% {
+        transform: skew(0deg, 0deg)
+    }
+
+    33% {
+        transform: skew(90deg, 180deg)
+    }
+
 }
